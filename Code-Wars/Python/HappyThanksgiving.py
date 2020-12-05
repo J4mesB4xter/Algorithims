@@ -1,2 +1,2 @@
-def TGD():
-    print("Happy Thanksgiving!")
+def MBD():
+    print("Happy Birthday, John!")
