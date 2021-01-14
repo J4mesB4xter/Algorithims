@@ -1,4 +1,4 @@
-# Stay-Sharp-Repository
+# Algorithims
 Originally entitled "Code-Wars-Snippets", this Repository has grown larger as I learn new things and needed a brand new title which appropriately encapsulated whats inside, which is perhaps too large to be properly summarized. The snippets are still around, but they will only be a piece of the repository moving forward. Now that I've developed a greater level of competency in multipple languages it simple where I store a record of exercises I perform to stay sharp.
 
 # Colt-Steele-Tutorial
