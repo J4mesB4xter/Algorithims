@@ -11,5 +11,3 @@ function getMiddle(s) {
       return s.substring(z-1, z+1)
     }
     }
-
-    
