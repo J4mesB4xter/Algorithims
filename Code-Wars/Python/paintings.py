@@ -39,23 +39,17 @@ def yellow_not_blue_green(*paintings):
     return True
 
 def every_color(*paintings):
-    has_yellow = False
-    has_red = False
-    has_pink = False
-    has_green = False
-    has_blue = False
+    color_count = 0
+    colors = {}
     for p in paintings:
-        if p["yellow"]:
-            has_yellow = True
-        if p["red"]:
-            has_red = True
-        if p["pink"]:
-            has_pink = True
-        if p["green"]:
-            has_green = True
-        if p["blue"]:
-            has_blue = True
-    return has_pink and has_green and has_blue and has_yellow and has_red
+        if color_count == 0:
+            color_count = len(p)
+        for key in p:
+            
+            if p[key]:
+                colors[key] = True
+    return len(colors) == color_count
+    # return has_pink and has_green and has_blue and has_yellow and has_red
 
 while True:
     p1 = blank_painting()
