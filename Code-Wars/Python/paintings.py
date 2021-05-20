@@ -12,46 +12,32 @@ def blank_painting():
 
 
 
-def two_reds(p1, p2, p3):
+def two_reds(*paintings):
     red_count = 0
-    if p1["red"]:
-       red_count += 1
-    if p2["red"]:
-       red_count += 1
-    if p3["red"]:
-        red_count += 1
+    for p in paintings:
+        if p["red"]:
+            red_count += 1
     return red_count == 2
 
 
-def blue_pink(p1, p2, p3):
+def blue_pink(*paintings):
     pink_blue_count = 0
-    if p1["blue"] and p1["pink"]:
-       pink_blue_count += 1
-    if p2["blue"] and p2["pink"]:
-        pink_blue_count += 1
-    if p3["blue"] and p3["pink"]:
-        pink_blue_count += 1
+    for p in paintings:
+        if p["blue"] and p["pink"]:
+            pink_blue_count += 1
     return pink_blue_count == 1
 
-def pink_not_green(p1, p2, p3):
-    if not p1["pink"] and not p1["green"]:
-        return False
-    if not p2["pink"] and not p2["green"]:
-        return False
-    if not p3["pink"] and not p3["green"]:
-        return False
+def pink_not_green(*paintings):
+    for p in paintings:
+        if not p["pink"] and not p["green"]:
+            return False
     return True
 
-def yellow_not_blue_green(p1, p2, p3):
-    if p1["yellow"]:
-        if p1["blue"] or p1["green"]:
-            return False
-    if p2["yellow"]:
-        if p2["blue"] or p2["green"]:
-            return False
-    if p3["yellow"]:
-        if p3["blue"] or p3["green"]:
-            return False
+def yellow_not_blue_green(*paintings):
+    for p in paintings:
+        if p["yellow"]:
+            if p["blue"] or p["green"]:
+                return False
     return True
 
 while True:
