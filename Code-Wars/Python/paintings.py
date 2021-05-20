@@ -33,6 +33,15 @@ def blue_pink(p1, p2, p3):
         pink_blue_count += 1
     return pink_blue_count == 1
 
+def pink_not_green(p1, p2, p3):
+    if not p1["pink"] and not p1["green"]:
+        return False
+    if not p2["pink"] and not p2["green"]:
+        return False
+    if not p3["pink"] and not p3["green"]:
+        return False
+    return True
+
 def yellow_not_blue_green(p1, p2, p3):
     if p1["yellow"]:
         if p1["blue"] or p1["green"]:
@@ -49,6 +58,8 @@ while True:
     p1 = blank_painting()
     p2 = blank_painting()
     p3 = blank_painting()
+    if not pink_not_green(p1, p2, p3):
+        continue
     if not blue_pink(p1, p2, p3):
         continue
     if not two_reds(p1, p2, p3):
