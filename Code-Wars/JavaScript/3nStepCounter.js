@@ -19,7 +19,6 @@ const errors = {
 function returnStepCount(n) {
   let iteration = 0
   n = Number(n)
-  console.log(n)
 
   if (isNaN(n)) {console.log(errors.inputNaNError); return}
   if (!Number.isInteger(n)) {console.log(errors.notAnIntegerError); return}
